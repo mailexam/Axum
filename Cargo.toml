@@ -1,0 +1,15 @@
+[package]
+name = "axum-mailexam"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = "0.8"
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+dotenvy = "0.15"
+lettre = { version = "0.11", default-features = false, features = [
+    "builder",
+    "smtp-transport",
+    "tokio1-rustls-tls",
+] }
