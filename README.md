@@ -1,6 +1,6 @@
 # Axum + Mailexam
 
-Minimal [Axum](https://github.com/tokio-rs/axum) example that sends test email through [Mailexam](https://mailexam.ru/) SMTP via [lettre](https://crates.io/crates/lettre).
+Minimal [Axum](https://github.com/tokio-rs/axum) example that sends test email through [Mailexam](https://mailexam.io/) SMTP via [lettre](https://crates.io/crates/lettre).
 
 Based on the [Mailexam Axum guide](https://wiki.mailexam.ru/en/examples/axum/).
 
@@ -13,7 +13,7 @@ From your Mailexam welcome email or dashboard:
 
 | Variable | Description |
 |----------|-------------|
-| `MAILEXAM_LOGIN` | SMTP login (host becomes `{login}.mailexam.ru`) |
+| `MAILEXAM_LOGIN` | SMTP login (host becomes `{login}.mailexam.io`) |
 | `MAILEXAM_PASSWORD` | SMTP password (paired with the login) |
 | `MAILEXAM_PORT` | SMTP port (default `587`, STARTTLS) |
 | `MAIL_FROM` | Sender address (any test address is fine) |
@@ -103,13 +103,13 @@ variables:
   MAIL_FROM: "noreply@example.test"
 ```
 
-After sending a message in a test, verify delivery via the [Mailexam API](https://mailexam.ru/api).
+After sending a message in a test, verify delivery via the [Mailexam API](https://mailexam.io/api).
 
 ## Troubleshooting
 
 **TLS or connection error**
 
-- Host must be `{login}.mailexam.ru`, where `{login}` matches `MAILEXAM_LOGIN`.
+- Host must be `{login}.mailexam.io`, where `{login}` matches `MAILEXAM_LOGIN`.
 - Login and password must come from the same Mailexam project.
 - For port **587** use `starttls_relay`, not SMTPS on 465.
 
@@ -122,6 +122,6 @@ After sending a message in a test, verify delivery via the [Mailexam API](https:
 
 - [Mailexam Axum guide (wiki)](https://wiki.mailexam.ru/en/examples/axum/)
 - [Actix Web reference implementation](https://github.com/mailexam/Actix) — same mail module, different HTTP framework
-- [Mailexam API documentation](https://mailexam.ru/api)
+- [Mailexam API documentation](https://mailexam.io/api)
 - [Axum documentation](https://docs.rs/axum/latest/axum/)
 - [lettre documentation](https://docs.rs/lettre/latest/lettre/)

@@ -15,7 +15,7 @@ impl MailConfig {
     pub fn from_env() -> Self {
         let login = std::env::var("MAILEXAM_LOGIN").expect("MAILEXAM_LOGIN");
         Self {
-            host: format!("{login}.mailexam.ru"),
+            host: format!("{login}.mailexam.io"),
             port: std::env::var("MAILEXAM_PORT")
                 .unwrap_or_else(|_| "587".into())
                 .parse()
