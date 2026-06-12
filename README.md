@@ -125,3 +125,7 @@ After sending a message in a test, verify delivery via the [Mailexam API](https:
 - [Mailexam API documentation](https://mailexam.io/api)
 - [Axum documentation](https://docs.rs/axum/latest/axum/)
 - [lettre documentation](https://docs.rs/lettre/latest/lettre/)
+
+## License
+
+Apache 2.0
